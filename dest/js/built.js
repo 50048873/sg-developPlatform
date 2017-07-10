@@ -1,4 +1,4 @@
-/* developplatform - 1.0.0 - 2017-06-22 */
+/* developplatform - 1.0.0 - 2017-06-23 */
 (function(doc, win) {
     var screenWidth = 0, size = 'M', root = doc.documentElement;
     if (window.screen && screen.width) {
@@ -4218,6 +4218,20 @@ $(function() {
 			url: "json/data1.json",
 			//data: userManageDatas,
 			height: CF.getHeight(),
+			responseHandler: function(res) { 
+				for (var i = 0; i < res.length; i++) { 
+					var userOrgList = res[i].userOrgList;
+					if (userOrgList && userOrgList.length) { 
+						for (var j = 0; j < userOrgList.length; j++) { 
+							var tsDepart = userOrgList[j].tsDepart;
+							if (tsDepart && tsDepart.departname) { 
+								res[i].departname = tsDepart.departname;
+							}
+						}
+					}
+				}
+				return res;
+			},
 		    columns: [{
 		        field: 'state',
 		        //radio: true //单选
@@ -4232,7 +4246,7 @@ $(function() {
 		        sortable: true
 		    }, {
 		        field: 'price',
-		        title: 'Item Price',
+		        title: 'Item price',
 		        sortable: true
 		    }, {
 	            field: 'operate',
