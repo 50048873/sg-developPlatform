@@ -21,10 +21,22 @@ $(function() {
 				if ($('#tabs').tabs('exists', node.text)) { 
 					$('#tabs').tabs('select', node.text)
 				} else { 
+
 					$('#tabs').tabs('add', { 
 						title: node.text,
 						closable: true,
 						href: url
+					});
+				}
+			} else { 
+				if (node.iconCls) return;
+				if ($('#tabs').tabs('exists', node.text)) { 
+					$('#tabs').tabs('select', node.text)
+				} else { 
+					$('#tabs').tabs('add', { 
+						title: node.text,
+						closable: true,
+						content: '<div class="pd-trl"><div id="organizeManageTable">' + node.text + '</div></div>'
 					});
 				}
 			}
