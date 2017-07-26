@@ -7,91 +7,29 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-touch-fullscreen" content="yes">
 		<title>基础开发平台</title>
-		<link rel="apple-touch-icon" href="img/icon.png" >
-		<link type="text/css" rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
-		<!-- table插件 -->
-		<link type="text/css" rel="stylesheet" href="vendor/bootstrap-table/dist/bootstrap-table.min.css">
-		<!-- 对话框插件 -->
-		<link type="text/css" rel="stylesheet" href="vendor/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
-		<!-- 侧边栏菜单插件 -->
-		<link type="text/css" rel="stylesheet" href="vendor/easybootstrap/css/navAside.css">
-		<!-- 自定样式 -->
-		<link type="text/css" rel="stylesheet" href="css/developPlatform.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.png">
+		<link rel="apple-touch-icon" href="img/favicon.png" >
+		<style>
+			html { 
+				height: 100%;
+			}
+			body { 
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+			}
+			iframe { 
+				width: 100%;
+				height: 100%;
+			}
+		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-default box-shadow">
-		    <div class="navbar-header">
-		    	<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-		      		<i class="glyphicon glyphicon-cog"></i>
-		    	</button>
-		    	<button class="navbar-toggle collapsed" id="asideWrap-toggle1">
-		      		<i class="glyphicon glyphicon-menu-hamburger"></i>
-		    	</button>
-		    	<a href="javascript:;" class="navbar-brand" href="index.html"><img src="img/logo.png" alt="log" />研发部基础开发平台</a>
-		    </div>
-
-		    <div class="collapse navbar-collapse" id="navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="javascript:;" id="asideWrap-toggle2"><i class="glyphicon glyphicon-transfer"></i>收缩菜单</a></li>
-		        <li class="dropdown">
-		        	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-		        		<i class="glyphicon glyphicon-user"></i>管理员，欢迎您  <span class="caret"></span>
-		        	</a>
-		        	<ul class="dropdown-menu">
-			        	<li><a href="javascript:;">设置</a></li>
-						<li><a href="javascript:;">退出</a></li>
-			        </ul>
-		        </li>
-		        <li><a href="javascript:;"><i class="glyphicon glyphicon-lock"></i><span class="visible-xs-inline">锁定</span></a></li>
-		        <li><a href="javascript:;"><i class="glyphicon glyphicon-ban-circle"></i><span class="visible-xs-inline">退出</span></a></li>
-		      </ul>
-		    </div>
-		</nav>
-
-		<div class="aside-wrap screen-left-out" id="aside-wrap">
-			<div class="navi-wrap">
-				<ul id="navAside" class="navAside"></ul>
-			</div>
-		</div>
-
-		<div id="content" class="content"></div>
-	
-		<!--确定大中小屏-->
-		<script src="js/screenWidth.js"></script>
+		<iframe id="fatherIframe" class="pageContainer" src="login.html" frameborder="0"></iframe>
 
 		<script src="vendor/jquery/dist/jquery.min.js"></script>
-		<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-
-		<!--table插件-->
-		<script src="vendor/bootstrap-table/dist/bootstrap-table.min.js"></script>
-		<script src="vendor/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
-
-		<!-- 导出插件 -->
-		<script src="vendor/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
-		<script src="vendor/bootstrap-table/dist/extensions/export/tableExport.js"></script>
-
-		<!-- 对话框插件 -->
-		<script src="vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
-
-        <!-- 自定义插件解析器 -->
-		<script src="vendor/easybootstrap/js/jquery.parser.js"></script>
-		<!-- 自定义侧边导航插件 -->
-		<script src="vendor/easybootstrap/js/jquery.navAside.js"></script>
-
-		<!-- 路由插件 -->
-		<script src="vendor/q/q.js"></script>
-
-		<!-- 初始化公共方法 -->
-		<script src="js/commonFn.js"></script>
-
-		<!-- 页面加载时初始化的内容 -->
-		<script src="js/index.js"></script>
-
-		<!-- 路由定义 -->
-		<script src="js/route.js"></script>
-		
-		<!-- 模块脚本 -->
-		<!-- 系统管理————角色管理 -->
-		<script src="module/systemManage/userManage/userManage.js"></script>
+		<script>
+			window.father = 1;
+		</script>
 	</body>
 </html>

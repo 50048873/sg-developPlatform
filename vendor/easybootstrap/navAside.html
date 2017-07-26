@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>基础开发平台</title>
-		<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
 		<link type="text/css" rel="stylesheet" href="css/navAside.css">
 	</head>
 	<body>
@@ -117,7 +117,7 @@
 		<ul id="tt" data-options="url:'json/navAside.json'"></ul>
     
 		<script src="../../vendor/jquery/dist/jquery.min.js"></script>
-		<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/jquery.parser.js"></script>
 		<script src="js/jquery.navAside.js"></script>
 		<script>
@@ -134,7 +134,7 @@
 					onBeforeLoad: function(node, param){ 
 						//param.id = 2;
 					},
-				    data: [{    
+				    /*data: [{    
 						    "id": 1,    
 						    "text": "系统管理",    
 						    "state": "closed", 
@@ -198,7 +198,7 @@
 						        "id": 42,    
 						        "text": "在线开发2"   
 						    }]  
-						}],
+						}],*/
 						onClick : function (node) {
 							//console.log($('#box').tree('getNode', node.target));
 							//console.log($('#tt').navAside('getData', node.target));

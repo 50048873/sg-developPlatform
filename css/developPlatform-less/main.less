@@ -1,0 +1,73 @@
+@import 'variable.less';
+
+body { 
+	background-color: #fafafa;
+}
+
+.navbar-default {
+    background-color: @32b5cb;
+    border: none;
+    border-radius: 0;
+    color: white;
+    margin-bottom: 0;
+    z-index: 9;
+	.navbar-brand {
+	    float: left;
+	    padding: 10px 15px;
+	    font-size: 18px;
+	    line-height: 30px;
+	    height: 50px;
+	    color: white;
+	    img { 
+			display:inline-block;
+			height: 100%;
+			margin-right: 10px;
+	    }
+	    &:hover { 
+			color: white;
+	    }
+	}
+	.navbar-nav>li>a {
+	    color: white;
+	}
+	.navbar-nav { 
+		.glyphicon { 
+			margin-right: 10px;
+		}
+	}
+}
+
+.content { 
+	margin: 15px 15px 15px 215px;
+	padding-bottom: 0;
+	background-color: white;
+	box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
+	.searchArea { 
+		width: 100%;
+		background-color: white;
+		padding: 15px;
+		border: 1px solid #ddd;
+		.form-group { 
+			margin-right: 15px;
+		}
+	}
+	.fixed-table-container {
+	    border-radius: 0;
+	    background-color: white;
+	}
+}
+
+.box-shadow {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.oddrow { 
+	background-color: #f8fcfd;
+}
+
+.modal-header { 
+	background-color: #337ab7;
+	.modal-title { 
+		color: white;
+	}
+}

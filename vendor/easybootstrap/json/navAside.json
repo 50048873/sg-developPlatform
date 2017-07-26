@@ -55,24 +55,22 @@
 	    "children": [
 		    {    
 		        "id": 41,    
-		        "text": "用户管理",
-		        "checked": true,
-		        "attributes": {    
-			        "url": "#!userManage"
-			    }
+		        "text": "用户管理"
 		    },
 		    {    
 		        "id": 42,    
 		        "text": "角色管理",
-		        "attributes": {    
-			        "url": "#!roleManage/str1/123"
+		        "attributes": {   
+		        	"url": "module/systemManage/userManage/userManage.html" ,
+			        "moduleName": "userManage"
 			    }
 		    },
 		    {    
 		        "id": 43,    
 		        "text": "组织机构",
 		        "attributes": {    
-			        "url": "#!noexist"
+			        "url": "module/systemManage/organizeManage/organizeManage.html",
+			        "moduleName": "organizeManage"
 			    }
 		    },
 		    {    

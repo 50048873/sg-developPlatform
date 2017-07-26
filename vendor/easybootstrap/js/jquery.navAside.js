@@ -137,7 +137,7 @@
 		var target = state.target;
 		//var timer = null;
 		$(document).on('click.navAside', '.navAside li a', function(e) { 
-			//e.preventDefault();
+			e.preventDefault();
 			var node = getNode(target, this);
 			if (node.state === 'closed') {
 				if (options.onBeforeExpand.call(target, node) == false) return;
@@ -239,9 +239,9 @@
 	//合并参数
 	$.fn.navAside.parseOptions = function(target){
 			/*
-			　* $.ebParser.parseOptions(target)没有传第2个参数properties，是禁用了非data-options的传参形式
+			　* $.parser.parseOptions(target)没有传第2个参数properties，是禁用了非data-options的传参形式
 			*/
-		var obj = $.extend({}, $.ebParser.parseOptions(target));
+		var obj = $.extend({}, $.parser.parseOptions(target));
 		return obj;
 	};
 	

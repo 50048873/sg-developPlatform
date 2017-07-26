@@ -1,0 +1,62 @@
+body { 
+	background: url(../img/bg.jpg) no-repeat center top;
+	margin: 0;
+	text-align: center;
+	img { 
+		max-width: 100%;
+	}
+}
+
+.loginWrap { 
+	display: inline-block;
+	padding: 15px;
+	.logo { 
+		text-align: left;
+		margin-top: 10%;
+	}
+	.loginForm { 
+		position: relative;
+		.form { 
+			position: absolute;
+			right: 20px;
+			top: 0;
+			bottom: 0;
+			background-color: white;
+			border: 1px solid #2bd2d4;
+			border-radius: 6px;
+			overflow: hidden;
+			box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+			h3 { 
+				background-color: #39c5b3;
+				margin: 0;
+				color: white;
+				padding: 15px 30px;
+				font-size: 18px;
+				letter-spacing: 1px;
+			}
+			.form-horizontal { 
+				width: 100%;
+				padding: 50px 15px;
+				label { 
+					white-space: nowrap;
+					padding-right: 0;
+				}
+				.form-group {
+				    margin-right: 0;
+				    margin-left: 0;
+				}
+				button { 
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) { 
+		.loginForm { 
+			margin-top: 15px;
+			.form { 
+				position: static;
+			}
+		}
+	}
+}

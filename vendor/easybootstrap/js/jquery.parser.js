@@ -8,21 +8,21 @@
  *
  */
 /**
- * ebParser - jQuery EasyBootstrap
+ * parser - jQuery EasyBootstrap
  * 
  */
 
 (function($){
-	$.ebParser = {
+	$.parser = {
 		auto: true,
 		onComplete: function(context){},
 		plugins:['navAside'],
 		parse: function(context){
 			var aa = [];
 			//循环plugins
-			for(var i=0; i<$.ebParser.plugins.length; i++){
+			for(var i=0; i<$.parser.plugins.length; i++){
 				//获取某个插件名
-				var name = $.ebParser.plugins[i];
+				var name = $.parser.plugins[i];
 				//获取以.easyui-开头的类名元素r
 				var r = $('.easyui-' + name, context);
 				//如果r存在
@@ -52,11 +52,11 @@
 						jq[name]();
 					}
 					//智能加载完成后调用回调
-					$.ebParser.onComplete.call($.ebParser, context);
+					$.parser.onComplete.call($.parser, context);
 				});
 			} else {
 				//r上的name方法执行完成后调用回调
-				$.ebParser.onComplete.call($.ebParser, context);
+				$.parser.onComplete.call($.parser, context);
 			}
 		},
 		
@@ -64,8 +64,8 @@
 		 * parse options, including standard 'data-options' attribute.
 		 * 
 		 * calling examples:
-		 * $.ebParser.parseOptions(target);
-		 * $.ebParser.parseOptions(target, ['id','title','width',{fit:'boolean',border:'boolean'},{min:'number'}]);
+		 * $.parser.parseOptions(target);
+		 * $.parser.parseOptions(target, ['id','title','width',{fit:'boolean',border:'boolean'},{min:'number'}]);
 		 */
 		parseOptions: function(target, properties){
 			/**
@@ -123,8 +123,8 @@
 		}
 	};
 	$(function(){
-		if ($.ebParser.auto){
-			$.ebParser.parse();
+		if ($.parser.auto){
+			$.parser.parse();
 		}
 	});
 })(jQuery);
